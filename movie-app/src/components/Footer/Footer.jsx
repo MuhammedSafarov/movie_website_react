@@ -8,9 +8,18 @@ const Footer = () => {
       <button className="signin-btn">Sign in for more access</button>
       <div className="social-media-icons">
         <div className="icons">
-          <BsLinkedin className="linkedin icon" />
-          <BsInstagram className="instagram icon" />
-          <BsGithub className="github icon" />
+          <a
+            href="https://www.linkedin.com/in/muhammed-safarov-ba0498246/"
+            target="_blank"
+          >
+            <BsLinkedin className="linkedin icon" />
+          </a>
+          <a href="https://www.instagram.com/_iamsafarov/" target="_blank">
+            <BsInstagram className="instagram icon" />
+          </a>
+          <a href="https://github.com/MuhammedSafarov" target="_blank">
+            <BsGithub className="github icon" />
+          </a>
         </div>
       </div>
       <div className="lists">

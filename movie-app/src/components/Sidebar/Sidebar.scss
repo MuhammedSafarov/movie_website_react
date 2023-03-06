@@ -1,0 +1,25 @@
+$main-color: #E1B517;
+
+.sidebar{
+    width: 23%;
+    .sidebar-sections{
+        padding: 20px;
+        li{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+            margin: 12px;
+            padding: 8px;
+            color: white;
+            opacity: 0.7;
+            .icon{
+                margin: 0 8px;
+            }
+        }
+        li:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
