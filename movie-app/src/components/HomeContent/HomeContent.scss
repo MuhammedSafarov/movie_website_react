@@ -1,0 +1,33 @@
+$main-color: #e1b517;
+
+.home-content {
+    margin-left: 10px;
+    width: 70%;
+  color: white;
+  .content-header {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    .tick {
+      width: 9px;
+      height: 25px;
+      border-radius: 3px;
+      background-color: $main-color;
+      margin-right: 8px;
+    }
+    .content-name {
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+  .movie-cards {
+      display: flex;
+      justify-content: space-around;
+    .movie-card {
+      img {
+        width: 10rem;
+        height: 18rem;
+      }
+    }
+  }
+}

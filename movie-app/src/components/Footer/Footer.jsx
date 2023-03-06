@@ -10,14 +10,14 @@ const Footer = () => {
         <div className="icons">
           <a
             href="https://www.linkedin.com/in/muhammed-safarov-ba0498246/"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <BsLinkedin className="linkedin icon" />
           </a>
-          <a href="https://www.instagram.com/_iamsafarov/" target="_blank">
+          <a href="https://www.instagram.com/_iamsafarov/" target="_blank" rel="noopener noreferrer">
             <BsInstagram className="instagram icon" />
           </a>
-          <a href="https://github.com/MuhammedSafarov" target="_blank">
+          <a href="https://github.com/MuhammedSafarov" target="_blank" rel="noopener noreferrer">
             <BsGithub className="github icon" />
           </a>
         </div>

@@ -5,6 +5,11 @@ $main-color: #E1B517;
   justify-content: space-between;
   padding: 30px;
   color: white;
+  .navbar-name{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+  }
   .navbar-sections {
     list-style: none;
     display: flex;

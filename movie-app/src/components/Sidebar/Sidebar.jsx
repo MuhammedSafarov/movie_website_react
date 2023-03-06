@@ -10,22 +10,22 @@ const Sidebar = () => {
     <div className="sidebar">
       <ul className="sidebar-sections">
         <li>
-          <AiOutlineHome className='icon' />
+          <AiOutlineHome className="icon" />
           Home
         </li>
         <li>
-          <BiTrendingUp className='icon' />
+          <BiTrendingUp className="icon" />
           Trends
         </li>
         <li>
-          <FiMonitor className='icon' />
+          <FiMonitor className="icon" />
           TV Shows
         </li>
         <li>
-          <BiCameraMovie className='icon' /> Movies
+          <BiCameraMovie className="icon" /> Movies
         </li>
         <li>
-          <MdOutlineRecentActors className='icon' /> Actors
+          <MdOutlineRecentActors className="icon" /> Actors
         </li>
       </ul>
     </div>

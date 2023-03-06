@@ -4,7 +4,7 @@ import './Header.scss'
 const Header = () => {
     return (
         <div className='header'>
-            <h1 className='navbar-name'>MS Movie</h1>
+            <div className='navbar-name'>MS Movie</div>
             <ul className="navbar-sections">
                 <li>Regiter</li>
                 <li>Login</li>
