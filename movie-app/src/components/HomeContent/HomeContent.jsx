@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./HomeContent.scss";
 import MovieCards from "./MovieCards";
+import SlickSlider from "../Slider/SlickSlider";
 
 const HomeContent = () => {
   const [discoverMovies, setDiscoverMovies] = useState([]);
@@ -13,7 +14,6 @@ const HomeContent = () => {
       )
       .then((response) => {
         setDiscoverMovies(response?.data?.results);
-        console.log(response);
       })
       .catch((err) => {
         console.log(err);
@@ -22,6 +22,7 @@ const HomeContent = () => {
 
   return (
     <div className="home-content">
+      <SlickSlider />
       <div className="discover-movies">
         <div className="content-header">
           <div className="tick"></div>

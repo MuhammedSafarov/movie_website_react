@@ -1,14 +1,27 @@
-$main-color: #E1B517;
+$main-color: #e1b517;
 
 .header {
+  background-color: black;
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   color: white;
-  .navbar-name{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: 1.5rem;
+  width: 95%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  .logo {
+    background-color: $main-color;
+    border-radius: 10px;
+    .navbar-name {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      padding: 10px;
+      font-size: 25px;
+      font-weight: bolder;
+      color: black;
+    }
   }
   .navbar-sections {
     list-style: none;
@@ -18,10 +31,10 @@ $main-color: #E1B517;
       margin-right: 20px;
       font-size: 18px;
     }
-    li:hover{
-        cursor: pointer;
-        transition: ease-in-out 0.2s;
-        color: $main-color;
+    li:hover {
+      cursor: pointer;
+      transition: ease-in-out 0.2s;
+      color: $main-color;
     }
   }
 }
