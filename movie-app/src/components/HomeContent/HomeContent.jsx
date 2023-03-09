@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./HomeContent.scss";
+import MovieCards from "./MovieCards";
 
 const HomeContent = () => {
-  //   const fetchProducts = async () => {
-  //     const data = await fetch(
-  //       "https://api.themoviedb.org/3/tv/popular?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US&page=1"
-  //     );
-  //     console.log(data);
-  //   };
-  //   useEffect(() => {
-  //     fetchProducts();
-  //   }, []);
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/tv/popular?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US&page=1"
+      )
+      .then((response) => {
+        setPopularMovies(response?.data?.results);
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="home-content">
@@ -18,32 +26,20 @@ const HomeContent = () => {
         <div className="tick"></div>
         <div className="content-name">New Movies</div>
       </div>
-      <div className="movie-cards">
-        <div className="movie-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tNnqMFQf9D5OuQiQTKtHJx8dxAlF4iX8LYpQyzw1AAMq9YLl"
-            alt=""
-          />
-          <div className="movie-name">Spider Man</div>
-          <div className="movie-genre">Action</div>
-        </div>
-        <div className="movie-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tNnqMFQf9D5OuQiQTKtHJx8dxAlF4iX8LYpQyzw1AAMq9YLl"
-            alt=""
-          />
-          <div className="movie-name">Spider Man</div>
-          <div className="movie-genre">Action</div>
-        </div>
-        <div className="movie-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tNnqMFQf9D5OuQiQTKtHJx8dxAlF4iX8LYpQyzw1AAMq9YLl"
-            alt=""
-          />
-          <div className="movie-name">Spider Man</div>
-          <div className="movie-genre">Action</div>
-        </div>
-      </div>
+      <MovieCards popularMovies={popularMovies}/>
+
+      {/* <div className="movie-cards">
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+        <MovieCards/>
+      </div> */}
     </div>
   );
 };

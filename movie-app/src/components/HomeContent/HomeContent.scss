@@ -1,8 +1,8 @@
 $main-color: #e1b517;
 
 .home-content {
-    margin-left: 10px;
-    width: 70%;
+  margin-left: 10px;
+  width: 70%;
   color: white;
   .content-header {
     display: flex;
@@ -21,9 +21,10 @@ $main-color: #e1b517;
     }
   }
   .movie-cards {
-      display: flex;
-      justify-content: space-around;
+    display: flex;
+    overflow-x: auto;
     .movie-card {
+      margin: 15px;
       img {
         width: 10rem;
         height: 18rem;
