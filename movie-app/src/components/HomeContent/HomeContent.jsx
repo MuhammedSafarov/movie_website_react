@@ -50,25 +50,37 @@ const HomeContent = () => {
       <div className="story-boxes">
         <div className="story-box">
           <img
-            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            src="https://thecentraltrend.com/wp-content/uploads/2022/10/MV5BOTczM2JhOGMtMmQzOC00ZjgwLTlhNDEtMzU3NDRmMTQzMjM4XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_-607x900.jpg"
+            alt=""
+          />
+        </div>
+        <div className="story-box unwatched">
+          <img
+            src="https://cdn.moviefone.com/admin-uploads/posters/aboutmyfather-movie-poster_1677101855.jpg?d=360x540&q=60"
+            alt=""
+          />
+        </div>
+        <div className="story-box unwatched">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/5/5b/Pearl_theatricalposter.jpg"
             alt=""
           />
         </div>
         <div className="story-box">
           <img
-            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            src="https://thecentraltrend.com/wp-content/uploads/2023/03/We-have-a-Ghost-608x900.jpg"
+            alt=""
+          />
+        </div>
+        <div className="story-box unwatched">
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/best-romantic-movies-2023-love-again-64075f6a2f1d1.jpg?resize=480:*"
             alt=""
           />
         </div>
         <div className="story-box">
           <img
-            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
-            alt=""
-          />
-        </div>
-        <div className="story-box">
-          <img
-            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            src="https://image.tmdb.org/t/p/original/oz3m1L64EmfSvXOP9fsarhGQiK.jpg"
             alt=""
           />
         </div>
