@@ -20,7 +20,10 @@ $main-color: #e1b517;
       padding: 10px;
       font-size: 25px;
       font-weight: bolder;
-      color: black;
+      .name-link {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
   .navbar-sections {

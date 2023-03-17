@@ -1,11 +1,45 @@
-.detail-container{
-    color: white;
-    padding: 20px;
-    width: 66%;
-    margin: 0 auto;
+$main-color: #e1b517;
+
+.detail-container {
+  color: white;
+  padding: 40px;
+  width: 66%;
+  margin: 0 auto;
+  margin-top: 10px;
+  .detail-card {
     display: flex;
-    .detail-img{
-        width: 20rem;
-        height: 28rem;
+    .detail-img {
+      width: 20rem;
+      height: 28rem;
+      border-radius: 10px;
+      border: 1px solid $main-color;
     }
+    .detail-info {
+      margin-left: 4rem;
+      div {
+        margin: 30px;
+      }
+      .movie-name {
+        font-size: 35px;
+        font-weight: bolder;
+        color: $main-color;
+      }
+      .rating {
+        display: flex;
+        font-size: 18px;
+        opacity: 0.8;
+        b {
+          margin-right: 5px;
+        }
+        .star-svg {
+          color: $main-color;
+          margin: 3px 4px;
+        }
+      }
+      .about-movie {
+        font-size: 17px;
+        opacity: 0.6;
+      }
+    }
+  }
 }

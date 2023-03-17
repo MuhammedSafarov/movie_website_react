@@ -88,7 +88,7 @@ const HomeContent = () => {
                     ? el?.name
                     : el?.original_title
                 }
-                vote={el?.vote_average}
+                vote={parseFloat(el?.vote_average.toFixed(1))}
               />
             );
           })}

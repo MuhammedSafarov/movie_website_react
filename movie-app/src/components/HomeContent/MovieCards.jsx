@@ -5,7 +5,7 @@ const MovieCards = ({ id, name, image, vote }) => {
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    navigate(`/movies-detail/${id}`);
+    navigate(`/discover-movies-detail/${id}`);
   };
 
   return (

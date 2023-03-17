@@ -5,7 +5,7 @@ const TrendMovieCards = ({ id, name, image, vote }) => {
 
   const navigate = useNavigate();
   const onClickHandler = () => {
-    navigate(`/movies-detail/${id}`);
+    navigate(`/trend-movies-detail/${id}`);
   };
 
   return (
