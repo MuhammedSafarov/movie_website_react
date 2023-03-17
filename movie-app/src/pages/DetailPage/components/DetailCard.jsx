@@ -1,18 +1,18 @@
 import React from "react";
 
-const DetailCard = () => {
+const DetailCard = ({img, name, about, star}) => {
 
   return (
     <div className="detail-card">
       <img
         className="detail-img"
-        src="https://cdn.marvel.com/content/1x/soc-spider-man-shoot-anim.jpg"
+        src={img}
         alt=""
       />
       <div className="detail-info">
-        <div className="movie-name">Spider Man 2</div>
+        <div className="movie-name">{name}</div>
         <div className="rating">
-          <b>IMDb Rating : </b> 4
+          <b>IMDb Rating : </b> {star}
           <svg
             width="15"
             height="15"
@@ -27,10 +27,7 @@ const DetailCard = () => {
           </svg>
         </div>
         <div className="about-movie">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, velit
-          accusamus! Amet, repellat voluptatem corporis laudantium ut ratione
-          praesentium nulla?Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eaque, autem?
+          {about}
         </div>
       </div>
     </div>

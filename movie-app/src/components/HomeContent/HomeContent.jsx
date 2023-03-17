@@ -47,6 +47,32 @@ const HomeContent = () => {
   return (
     <div className="home-content">
       <SlickSlider />
+      <div className="story-boxes">
+        <div className="story-box">
+          <img
+            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            alt=""
+          />
+        </div>
+        <div className="story-box">
+          <img
+            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            alt=""
+          />
+        </div>
+        <div className="story-box">
+          <img
+            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            alt=""
+          />
+        </div>
+        <div className="story-box">
+          <img
+            src="https://i0.wp.com/newswirengr.com/wp-content/uploads/2023/02/image-174.png?resize=480%2C600&ssl=1"
+            alt=""
+          />
+        </div>
+      </div>
       <div className="movies">
         <div className="content-header">
           <div className="tick"></div>

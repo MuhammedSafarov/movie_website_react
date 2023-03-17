@@ -10,6 +10,10 @@ const DiscoverDetailPage = () => {
   const [selectedMovie, setSelectedMovie] = useState([]);
   const [discoveredMovie, setDiscoveredMovie] = useState([]);
 
+  let movie_img = (posterpath) => {
+    return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
+  };
+
   const discoverMovies = async () => {
     let res = await axios.get(
       "https://api.themoviedb.org/3/discover/movie?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
@@ -22,23 +26,27 @@ const DiscoverDetailPage = () => {
     discoverMovies();
   }, []);
 
-  // discoveredMovie.forEach((el) => {
-  //   el.id === moviesId ? setSelectedMovie(el) ;
-  // });
+  useEffect(() => {
+    setSelectedMovie(discoveredMovie.find((item) => item.id === moviesId));
+  }, [discoveredMovie, moviesId]);
 
-  for (let i = 0; i < discoveredMovie.length; i++) {
-    if (discoveredMovie[i].id === moviesId) {
-      setSelectedMovie(discoveredMovie[i]);
-      console.log(selectedMovie);
-    }
-  }
+  console.log(selectedMovie);
 
-  // setSelectedMovie(discoveredMovie.find((movie) => movie.id === moviesId));
-  // console.log(selectedMovie);
+  // for (let i = 0; i < discoveredMovie.length; i++) {
+  //   if (discoveredMovie[i].id === moviesId) {
+  //     setSelectedMovie(discoveredMovie[i]);
+  //     console.log(selectedMovie);
+  //   }
+  // }
 
   return (
     <div className="detail-container">
-      <DetailCard />
+      <DetailCard
+        img={movie_img(selectedMovie?.poster_path)}
+        name={selectedMovie?.title}
+        about={selectedMovie?.overview}
+        star={selectedMovie?.vote_average}
+      />
     </div>
   );
 };
