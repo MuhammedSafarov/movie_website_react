@@ -22,22 +22,23 @@ const DiscoverDetailPage = () => {
     setDiscoveredMovie(data);
   };
 
+  const getImages = async () => {
+    let res = await axios.get(
+      `https://api.themoviedb.org/3/movie/${moviesId}/videos?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US`
+    );
+    let data = res?.request?.responseURL;
+    console.log(res);
+    console.log(data);
+  };
+
   useEffect(() => {
     discoverMovies();
+    getImages();
   }, []);
 
   useEffect(() => {
     setSelectedMovie(discoveredMovie.find((item) => item.id === moviesId));
   }, [discoveredMovie, moviesId]);
-
-  console.log(selectedMovie);
-
-  // for (let i = 0; i < discoveredMovie.length; i++) {
-  //   if (discoveredMovie[i].id === moviesId) {
-  //     setSelectedMovie(discoveredMovie[i]);
-  //     console.log(selectedMovie);
-  //   }
-  // }
 
   return (
     <div className="detail-container">
