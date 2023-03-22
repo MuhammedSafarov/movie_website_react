@@ -1,5 +1,104 @@
-.homepage{
-    .container{
-        display: flex;
+$main-color: #e1b517;
+
+.homepage {
+  .container {
+    display: flex;
+    .sidebar {
+      width: 23%;
+      .sidebar-sections {
+        padding: 20px;
+        margin-left: 20px;
+        position: sticky;
+        top: 88px;
+        li:nth-child(1) {
+          display: flex;
+          width: 100%;
+          border: none;
+          margin: 20px;
+          padding: 0;
+          opacity: 1;
+          .search-form {
+            position: relative;
+            input {
+              width: 12rem;
+              height: 30px;
+              border-radius: 8px;
+              border: none;
+              padding: 16px;
+            }
+            .submit-btn {
+              background: none;
+              border: none;
+              color: white;
+              margin-left: 8px;
+              height: 40px;
+              position: absolute;
+              .search-icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            .submit-btn:hover {
+              cursor: pointer;
+              color: $main-color;
+            }
+          }
+        }
+        li {
+          width: 85%;
+          display: flex;
+          align-items: center;
+          font-size: 19px;
+          margin: 12px;
+          padding: 8px;
+          color: white;
+          opacity: 0.7;
+          padding-left: 20px;
+          border: 1px solid $main-color;
+          border-radius: 8px;
+          .icon {
+            margin: 0 8px;
+          }
+        }
+        li:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
     }
+    .search-content {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .movie-card {
+        color: white;
+        margin: 15px;
+        width: 10rem;
+        img {
+          width: 10rem;
+          height: 17rem;
+          border-radius: 10px;
+        }
+        img:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+        .movie-rating {
+          display: flex;
+          align-items: center;
+          .star-svg {
+            color: $main-color;
+            margin: 5px 4px;
+          }
+        }
+        .movie-name {
+          font-weight: bolder;
+          font-size: 16px;
+          margin-left: 5px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
 }
