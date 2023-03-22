@@ -39,7 +39,7 @@ const DetailPage = () => {
             : selectedMovie?.title
         }
         about={selectedMovie?.overview}
-        star={selectedMovie?.vote_average}
+        star={selectedMovie?.vote_average?.toFixed(1)}
       />
     </div>
   );

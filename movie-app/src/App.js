@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import TrendDetailPage from "./pages/DetailPage/TrendDetailPage";
 import DiscoverDetailPage from "./pages/DetailPage/DiscoverDetailPage";
+import SearchDetailPage from "./pages/homePage/searchDetail/SearchDetailPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           path="/discover-movies-detail/:id"
           element={<DiscoverDetailPage />}
         />
+        <Route path='/search/movies/:id' element={<SearchDetailPage/>} />
       </Routes>
       <Footer />
     </div>

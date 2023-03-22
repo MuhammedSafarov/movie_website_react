@@ -22,18 +22,10 @@ const DiscoverDetailPage = () => {
     setDiscoveredMovie(data);
   };
 
-  const getImages = async () => {
-    let res = await axios.get(
-      `https://api.themoviedb.org/3/movie/${moviesId}/videos?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US`
-    );
-    let data = res?.request?.responseURL;
-    console.log(res);
-    console.log(data);
-  };
+ 
 
   useEffect(() => {
     discoverMovies();
-    getImages();
   }, []);
 
   useEffect(() => {
@@ -44,9 +36,13 @@ const DiscoverDetailPage = () => {
     <div className="detail-container">
       <DetailCard
         img={movie_img(selectedMovie?.poster_path)}
-        name={selectedMovie?.title}
+        name={
+          selectedMovie?.title === undefined
+            ? selectedMovie?.name
+            : selectedMovie?.title
+        }
         about={selectedMovie?.overview}
-        star={selectedMovie?.vote_average}
+        star={selectedMovie?.vote_average?.toFixed(1)}
       />
     </div>
   );

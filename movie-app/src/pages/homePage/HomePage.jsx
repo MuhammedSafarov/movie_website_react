@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import { MdOutlineRecentActors } from "react-icons/md";
 import axios from "axios";
 import HomeContent from "../../components/HomeContent/HomeContent";
-import MovieCards from "../../components/HomeContent/MovieCards";
+import SearchDetailCard from "./searchDetail/SearchDetailCard";
 
 const HomePage = () => {
   const [searchedMovie, setSearchedMovie] = useState([]);
@@ -20,6 +20,7 @@ const HomePage = () => {
     );
     let data = res?.data?.results;
     setSearchedMovie(data);
+    localStorage.setItem('movieName', JSON.stringify(searchKey));
   };
 
   let movie_img = (posterpath) => {
@@ -66,7 +67,7 @@ const HomePage = () => {
           <div className="search-content">
             {searchedMovie?.map((item) => {
               return (
-                <MovieCards
+                <SearchDetailCard
                   key={item?.id}
                   id={item?.id}
                   image={movie_img(item?.poster_path)}
@@ -81,7 +82,7 @@ const HomePage = () => {
             })}
           </div>
         ) : (
-          <HomeContent/>
+          <HomeContent />
         )}
       </div>
     </div>
