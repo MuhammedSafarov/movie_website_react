@@ -1,5 +1,5 @@
 import "./HomePage.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiTrendingUp, BiCameraMovie } from "react-icons/bi";
 import { FiMonitor } from "react-icons/fi";
@@ -8,10 +8,27 @@ import { MdOutlineRecentActors } from "react-icons/md";
 import axios from "axios";
 import HomeContent from "../../components/HomeContent/HomeContent";
 import SearchDetailCard from "./searchDetail/SearchDetailCard";
+import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import {getTrendMoviesAsync} from '../../store/actions/trendMovies';
+import { discoverMoviesAsync } from "../../store/actions/discoverMovies";
 
 const HomePage = () => {
   const [searchedMovie, setSearchedMovie] = useState([]);
   const [searchKey, setSearchKey] = useState("");
+  const dispatch = useDispatch();
+
+  function trendMovies() {
+    dispatch(getTrendMoviesAsync());
+  }
+  function discoverMovies() {
+    dispatch(discoverMoviesAsync());
+  }
+
+  useEffect(() => {
+    trendMovies();
+    discoverMovies();
+  }, []);
 
   const findMovie = async (e) => {
     e.preventDefault();
@@ -20,7 +37,7 @@ const HomePage = () => {
     );
     let data = res?.data?.results;
     setSearchedMovie(data);
-    localStorage.setItem('movieName', JSON.stringify(searchKey));
+    localStorage.setItem("movieName", JSON.stringify(searchKey));
   };
 
   let movie_img = (posterpath) => {
@@ -44,22 +61,32 @@ const HomePage = () => {
               </form>
             </li>
             <li>
-              <AiOutlineHome className="icon" />
-              Home
+              <Link  className='link' to="/">
+                <AiOutlineHome className="icon" />
+                Home
+              </Link>
             </li>
             <li>
-              <BiTrendingUp className="icon" />
-              Trends
+              <Link  className='link' to="/trend-movies-detail">
+                <BiTrendingUp className="icon" />
+                Trends
+              </Link>
             </li>
             <li>
-              <FiMonitor className="icon" />
-              TV Shows
+              <Link className='link' >
+                <FiMonitor className="icon" />
+                TV Shows
+              </Link>
             </li>
             <li>
-              <BiCameraMovie className="icon" /> Movies
+              <Link className='link' >
+                <BiCameraMovie className="icon" /> Movies
+              </Link>
             </li>
             <li>
-              <MdOutlineRecentActors className="icon" /> Actors
+              <Link className='link' >
+                <MdOutlineRecentActors className="icon" /> Actors
+              </Link>
             </li>
           </ul>
         </div>

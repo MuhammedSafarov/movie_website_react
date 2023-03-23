@@ -4,10 +4,29 @@ import "./HomeContent.scss";
 import MovieCards from "./MovieCards";
 import SlickSlider from "../Slider/SlickSlider";
 import TrendMovieCards from "./TrendMovieCards";
+// import {useSelector, useDispatch} from 'react-redux';
+// import {getTrendMoviesAsync} from '../../store/actions/trendMovies';
+// import { discoverMoviesAsync } from "../../store/actions/discoverMovies";
 
 const HomeContent = () => {
   const [discoverMovies, setDiscoverMovies] = useState([]);
   const [trendMovies, setTrendMovies] = useState([]);
+  // const dispatch = useDispatch();
+
+  // function trendMovies() {
+  //   dispatch(getTrendMoviesAsync());
+  // }
+  // function discoverMovies() {
+  //   dispatch(discoverMoviesAsync());
+  // }
+
+  // useEffect(() => {
+  //   trendMovies();
+  //   discoverMovies();
+  // }, []);
+
+  // const discoverMoviesList = useSelector(state => state.discoveredMovies)
+  // console.log(discoverMoviesList);
 
   const discoverNewMovies = () => {
     axios
