@@ -67,7 +67,7 @@ const HomePage = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" to="/trend-movies-detail">
+              <Link className="link" to="/trend-movies">
                 <BiTrendingUp className="icon" />
                 Trends
               </Link>
