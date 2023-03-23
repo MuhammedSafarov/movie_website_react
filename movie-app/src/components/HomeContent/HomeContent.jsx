@@ -4,64 +4,15 @@ import "./HomeContent.scss";
 import MovieCards from "./MovieCards";
 import SlickSlider from "../Slider/SlickSlider";
 import TrendMovieCards from "./TrendMovieCards";
-// import {useSelector, useDispatch} from 'react-redux';
-// import {getTrendMoviesAsync} from '../../store/actions/trendMovies';
-// import { discoverMoviesAsync } from "../../store/actions/discoverMovies";
+import { useSelector } from "react-redux";
 
 const HomeContent = () => {
-  const [discoverMovies, setDiscoverMovies] = useState([]);
-  const [trendMovies, setTrendMovies] = useState([]);
-  // const dispatch = useDispatch();
-
-  // function trendMovies() {
-  //   dispatch(getTrendMoviesAsync());
-  // }
-  // function discoverMovies() {
-  //   dispatch(discoverMoviesAsync());
-  // }
-
-  // useEffect(() => {
-  //   trendMovies();
-  //   discoverMovies();
-  // }, []);
-
-  // const discoverMoviesList = useSelector(state => state.discoveredMovies)
-  // console.log(discoverMoviesList);
-
-  const discoverNewMovies = () => {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=d448aa11b683dfdce0641c3887f9a164&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
-      )
-      .then((response) => {
-        setDiscoverMovies(response?.data?.results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  const trendingMovies = () => {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/trending/all/day?api_key=d448aa11b683dfdce0641c3887f9a164"
-      )
-      .then((response) => {
-        setTrendMovies(response?.data?.results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  const { discoveredMovies } = useSelector((state) => state.discoverMovies);
+  const { trendingMovies } = useSelector((state) => state.trendMovies);
 
   let movie_img = (posterpath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
-
-  useEffect(() => {
-    discoverNewMovies();
-    trendingMovies();
-  }, []);
 
   return (
     <div className="home-content">
@@ -111,7 +62,7 @@ const HomeContent = () => {
         </div>
 
         <div className="movie-cards">
-          {discoverMovies?.map((item) => {
+          {discoveredMovies?.map((item) => {
             return (
               <MovieCards
                 key={item?.id}
@@ -134,7 +85,7 @@ const HomeContent = () => {
           <div className="content-name">Trends</div>
         </div>
         <div className="movie-cards">
-          {trendMovies?.map((el) => {
+          {trendingMovies?.map((el) => {
             return (
               <TrendMovieCards
                 key={el?.id}

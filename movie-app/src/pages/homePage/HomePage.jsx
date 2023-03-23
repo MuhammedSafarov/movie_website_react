@@ -9,8 +9,8 @@ import axios from "axios";
 import HomeContent from "../../components/HomeContent/HomeContent";
 import SearchDetailCard from "./searchDetail/SearchDetailCard";
 import { Link } from "react-router-dom";
-import {useDispatch} from 'react-redux';
-import {getTrendMoviesAsync} from '../../store/actions/trendMovies';
+import { useDispatch } from "react-redux";
+import { getTrendMoviesAsync } from "../../store/actions/trendMovies";
 import { discoverMoviesAsync } from "../../store/actions/discoverMovies";
 
 const HomePage = () => {
@@ -61,30 +61,30 @@ const HomePage = () => {
               </form>
             </li>
             <li>
-              <Link  className='link' to="/">
+              <Link className="link" to="/">
                 <AiOutlineHome className="icon" />
                 Home
               </Link>
             </li>
             <li>
-              <Link  className='link' to="/trend-movies-detail">
+              <Link className="link" to="/trend-movies-detail">
                 <BiTrendingUp className="icon" />
                 Trends
               </Link>
             </li>
             <li>
-              <Link className='link' >
+              <Link className="link">
                 <FiMonitor className="icon" />
                 TV Shows
               </Link>
             </li>
             <li>
-              <Link className='link' >
+              <Link className="link">
                 <BiCameraMovie className="icon" /> Movies
               </Link>
             </li>
             <li>
-              <Link className='link' >
+              <Link className="link">
                 <MdOutlineRecentActors className="icon" /> Actors
               </Link>
             </li>
