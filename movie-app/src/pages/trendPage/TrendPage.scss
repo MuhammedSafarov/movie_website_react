@@ -1,3 +1,44 @@
-.trend-movies{
-    color: white;
+$main-color: #e1b517;
+
+.trend-page {
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  .navigation-map {
+    font-size: 20px;
+  }
+  .trend-movie-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .movie-card {
+      color: white;
+      margin: 15px;
+      width: 10rem;
+      img {
+        width: 10rem;
+        height: 17rem;
+        border-radius: 10px;
+      }
+      img:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      .movie-rating {
+        display: flex;
+        align-items: center;
+        .star-svg {
+          color: $main-color;
+          margin: 5px 4px;
+        }
+      }
+      .movie-name {
+        font-weight: bolder;
+        font-size: 16px;
+        margin-left: 5px;
+        overflow: hidden;
+      }
+    }
+  }
 }

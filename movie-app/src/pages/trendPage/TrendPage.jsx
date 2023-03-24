@@ -13,25 +13,31 @@ const TrendPage = () => {
   };
 
   return (
-    <div className="trend-movies">
+    <div className="trend-page">
       <div className="navigation-map">Home Trend Movies </div>
       <div className="filter-params">
-        <select name="Genre" id="">
-          <option value="kjsd">hel</option>
-          <option value="lm"> hello</option>
-        </select>
+        <form action="">
+          <select name="Genre" id="">
+            <option value="kjsd">Crime</option>
+            <option value="lm"> Drama</option>
+            <option value="lkd">Comedy</option>
+          </select>
+          <button className="apply">Apply</button>
+        </form>
       </div>
-      <div className="movie-cards">
+      <div className="trend-movie-cards">
         {trendingMovies?.map((el) => {
-          <TrendMovieCards
-            key={el?.id}
-            id={el.id}
-            image={movie_img(el?.poster_path)}
-            name={
-              el?.original_title === undefined ? el?.name : el?.original_title
-            }
-            vote={parseFloat(el?.vote_average.toFixed(1))}
-          />;
+          return (
+            <TrendMovieCards
+              key={el?.id}
+              id={el?.id}
+              image={movie_img(el?.poster_path)}
+              name={
+                el?.original_title === undefined ? el?.name : el?.original_title
+              }
+              vote={parseFloat(el?.vote_average.toFixed(1))}
+            />
+          );
         })}
       </div>
     </div>
