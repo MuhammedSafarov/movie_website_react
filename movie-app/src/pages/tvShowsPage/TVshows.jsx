@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import "./TrendPage.scss";
+import "../trendPage/TrendPage.scss";
 import { useSelector, useDispatch } from "react-redux";
 import TrendMovieCards from "../../components/HomeContent/TrendMovieCards";
-import { getTrendMoviesAsync } from "../../store/actions/trendMovies";
 import { Link } from "react-router-dom";
+import { getTvShowsAsync } from "../../store/actions/tvShows";
 
-const TrendPage = () => {
+const TVshows = () => {
   const dispatch = useDispatch();
-  const { trendingMovies } = useSelector((state) => state.trendMovies);
+  const { allTvShows } = useSelector((state) => state.tvShows);
 
   useEffect(() => {
-    dispatch(getTrendMoviesAsync());
+    dispatch(getTvShowsAsync());
   }, [dispatch]);
 
   let movie_img = (posterpath) => {
@@ -20,21 +20,21 @@ const TrendPage = () => {
 
   return (
     <div className="trend-page">
-      <h2>Trend Movies</h2>
+      <h2>TV Shows</h2>
       <div className="content-header">
         <div className="navigation-map">
           <Link className="link" to="/">
             Home
           </Link>
           <AiOutlineDoubleRight className="navigation-icon" />{" "}
-          <Link to="/trend-movies" className="link">
-            Trend Movies
+          <Link to="/tv-shows" className="link">
+            TV Shows
           </Link>
         </div>
         <div className="filter-params">
           <form>
             <select name="Genre" id="">
-              <option value="">Movie Genre</option>
+              <option value="">Tv Show Types</option>
               <option value="28">Action</option>
               <option value="12"> Adventure</option>
               <option value="35">Comedy</option>
@@ -44,7 +44,7 @@ const TrendPage = () => {
         </div>
       </div>
       <div className="trend-movie-cards">
-        {trendingMovies?.map((el) => {
+        {allTvShows?.map((el) => {
           return (
             <TrendMovieCards
               key={el?.id}
@@ -62,4 +62,4 @@ const TrendPage = () => {
   );
 };
 
-export default TrendPage;
+export default TVshows;

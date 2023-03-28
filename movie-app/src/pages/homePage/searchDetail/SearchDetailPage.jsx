@@ -29,7 +29,6 @@ const SearchDetailPage = () => {
   useEffect(() => {
     setSelectedMovie(searchedMovies.find((item) => item.id === moviesId));
   }, [searchedMovies, moviesId]);
-  // console.log(selectedMovie);
 
   return (
     <div className="detail-container">

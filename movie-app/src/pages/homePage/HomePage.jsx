@@ -1,7 +1,7 @@
 import "./HomePage.scss";
 import React, { useState, useEffect } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { BiTrendingUp, BiCameraMovie } from "react-icons/bi";
+import { BiTrendingUp } from "react-icons/bi";
 import { FiMonitor } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineRecentActors } from "react-icons/md";
@@ -18,17 +18,10 @@ const HomePage = () => {
   const [searchKey, setSearchKey] = useState("");
   const dispatch = useDispatch();
 
-  function trendMovies() {
-    dispatch(getTrendMoviesAsync());
-  }
-  function discoverMovies() {
-    dispatch(discoverMoviesAsync());
-  }
-
   useEffect(() => {
-    trendMovies();
-    discoverMovies();
-  }, []);
+    dispatch(discoverMoviesAsync());
+    dispatch(getTrendMoviesAsync());
+  }, [dispatch]);
 
   const findMovie = async (e) => {
     e.preventDefault();
@@ -52,10 +45,12 @@ const HomePage = () => {
             <li className="search">
               <form onSubmit={findMovie} action="" className="search-form">
                 <input
+                  className="input"
                   type="text"
+                  placeholder="Search movie..."
                   onChange={(e) => setSearchKey(e.target.value)}
                 />
-                <button type="submit" className="submit-btn">
+                <button type="submit" className="search-btn">
                   <FaSearch className="search-icon" />
                 </button>
               </form>
@@ -73,18 +68,13 @@ const HomePage = () => {
               </Link>
             </li>
             <li>
-              <Link className="link">
+              <Link className="link" to="/tv-shows">
                 <FiMonitor className="icon" />
                 TV Shows
               </Link>
             </li>
             <li>
-              <Link className="link">
-                <BiCameraMovie className="icon" /> Movies
-              </Link>
-            </li>
-            <li>
-              <Link className="link">
+              <Link className="link" to="/actors">
                 <MdOutlineRecentActors className="icon" /> Actors
               </Link>
             </li>

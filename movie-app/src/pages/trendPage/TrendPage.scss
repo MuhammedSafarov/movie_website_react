@@ -5,9 +5,46 @@ $main-color: #e1b517;
   width: 70%;
   margin: 0 auto;
   margin-top: 50px;
-  .navigation-map {
-    font-size: 20px;
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    .navigation-map {
+      width: 18%;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .link {
+        color: white;
+        opacity: 0.7;
+        text-decoration: none;
+      }
+      .link:hover {
+        opacity: 1;
+      }
+      .navigation-icon {
+        color: $main-color;
+      }
+    }
+    .filter-params {
+      select {
+        width: 8rem;
+        margin-right: 5px;
+      }
+      select,
+      .apply {
+        border: none;
+        border-radius: 10px;
+        padding: 8px;
+      }
+      .apply{
+        background-color: $main-color;
+      }
+    }
   }
+
   .trend-movie-cards {
     display: flex;
     justify-content: space-between;

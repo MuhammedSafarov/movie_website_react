@@ -11,7 +11,7 @@ const SearchDetailCard = ({ id, name, image, vote }) => {
 
   return (
     <div onClick={onClickHandler} className="movie-card">
-      <img src={image} alt={name} />
+      <img src={image} alt="img not available" />
       <div className="movie-rating">
         <svg
           width="15"
