@@ -33,7 +33,7 @@ const TVshows = () => {
         </div>
         <div className="filter-params">
           <form>
-            <select name="Genre" id="">
+            <select name="Types" id="">
               <option value="">Tv Show Types</option>
               <option value="28">Action</option>
               <option value="12"> Adventure</option>

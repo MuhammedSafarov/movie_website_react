@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 import { useNavigate } from "react-router-dom";
 
-const TrendMovieCards = ({ id, name, image, vote }) => {
-  const navigate = useNavigate();
+const tvCard = () => {
+    const navigate = useNavigate();
   const onClickHandler = () => {
     navigate(`/trend-movies-detail/${id}`);
   };
@@ -27,8 +27,7 @@ const TrendMovieCards = ({ id, name, image, vote }) => {
         </div>
         <div className="movie-name">{name}</div>
       </div>
-    
   );
-};
+}
 
-export default TrendMovieCards;
+export default tvCard

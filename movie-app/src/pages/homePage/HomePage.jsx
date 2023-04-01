@@ -1,6 +1,5 @@
 import "./HomePage.scss";
 import React, { useState, useEffect } from "react";
-import { AiOutlineHome } from "react-icons/ai";
 import { BiTrendingUp } from "react-icons/bi";
 import { FiMonitor } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
@@ -54,12 +53,6 @@ const HomePage = () => {
                   <FaSearch className="search-icon" />
                 </button>
               </form>
-            </li>
-            <li>
-              <Link className="link" to="/">
-                <AiOutlineHome className="icon" />
-                Home
-              </Link>
             </li>
             <li>
               <Link className="link" to="/trend-movies">

@@ -9,6 +9,7 @@ import SearchDetailPage from "./pages/homePage/searchDetail/SearchDetailPage";
 import TrendPage from "./pages/trendPage/TrendPage";
 import TVshows from "./pages/tvShowsPage/TVshows";
 import ActorsPage from "./pages/actorsPage/ActorsPage";
+import ActorsDetailPage from "./pages/DetailPage/ActorsDetailPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/trend-movies' element={<TrendPage/>} />
         <Route path='/tv-shows' element={<TVshows/>}/>
         <Route path='/actors' element={<ActorsPage/>} />
+        <Route path='/actors/about/:id' element={<ActorsDetailPage/>} />
       </Routes>
       <Footer />
     </div>
