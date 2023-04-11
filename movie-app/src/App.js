@@ -10,6 +10,7 @@ import TrendPage from "./pages/trendPage/TrendPage";
 import TVshows from "./pages/tvShowsPage/TVshows";
 import ActorsPage from "./pages/actorsPage/ActorsPage";
 import ActorsDetailPage from "./pages/DetailPage/ActorsDetailPage";
+import TvShowsDetailPage from "./pages/DetailPage/TvShowsDetailPage";
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
           element={<DiscoverDetailPage />}
         />
         <Route path="/search/movies/:id" element={<SearchDetailPage />} />
-        <Route path='/trend-movies' element={<TrendPage/>} />
-        <Route path='/tv-shows' element={<TVshows/>}/>
-        <Route path='/actors' element={<ActorsPage/>} />
-        <Route path='/actors/about/:id' element={<ActorsDetailPage/>} />
+        <Route path="/trend-movies" element={<TrendPage />} />
+        <Route path="/tv-shows" element={<TVshows />} />
+        <Route path="tv-shows/detail/:id" element={<TvShowsDetailPage />} />
+        <Route path="/actors" element={<ActorsPage />} />
+        <Route path="/actors/about/:id" element={<ActorsDetailPage />} />
       </Routes>
       <Footer />
     </div>

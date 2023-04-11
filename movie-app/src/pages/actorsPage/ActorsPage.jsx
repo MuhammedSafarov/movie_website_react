@@ -27,7 +27,7 @@ const ActorsPage = () => {
           <Link className="link" to="/">
             Home
           </Link>
-          <AiOutlineDoubleRight className="navigation-icon" />{" "}
+          <AiOutlineDoubleRight className="navigation-icon" />
           <Link to="/actors" className="link">
             Actors
           </Link>
@@ -46,13 +46,6 @@ const ActorsPage = () => {
       <div className="card-list">
         {actors?.map((el) => {
           return (
-            // <TrendMovieCards
-            //   key={el?.id}
-            //   id={el?.id}
-            // image={profile_img(el?.profile_path)}
-            // name={el?.name}
-            // vote={el?.popularity.toFixed(0)}
-            // />
             <ActorCard
               key={el.id}
               id={el.id}

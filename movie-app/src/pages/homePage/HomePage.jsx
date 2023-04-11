@@ -1,6 +1,6 @@
 import "./HomePage.scss";
 import React, { useState, useEffect } from "react";
-import { BiTrendingUp } from "react-icons/bi";
+import { BiTrendingUp, BiHome } from "react-icons/bi";
 import { FiMonitor } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineRecentActors } from "react-icons/md";
@@ -36,6 +36,8 @@ const HomePage = () => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${posterpath}`;
   };
 
+  const refresh = () => window.location.reload(true);
+
   return (
     <div className="homepage">
       <div className="container">
@@ -55,20 +57,26 @@ const HomePage = () => {
               </form>
             </li>
             <li>
+              <Link className="link" to="">
+                <BiHome className="icon" />
+                <button onClick={refresh}>Home</button>
+              </Link>
+            </li>
+            <li>
               <Link className="link" to="/trend-movies">
                 <BiTrendingUp className="icon" />
-                Trends
+                <div> Trends</div>{" "}
               </Link>
             </li>
             <li>
               <Link className="link" to="/tv-shows">
                 <FiMonitor className="icon" />
-                TV Shows
+                <div> TV Shows</div>{" "}
               </Link>
             </li>
             <li>
               <Link className="link" to="/actors">
-                <MdOutlineRecentActors className="icon" /> Actors
+                <MdOutlineRecentActors className="icon" /> <div> Actors</div>{" "}
               </Link>
             </li>
           </ul>

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import "../trendPage/TrendPage.scss";
 import { useSelector, useDispatch } from "react-redux";
-import TrendMovieCards from "../../components/HomeContent/TrendMovieCards";
 import { Link } from "react-router-dom";
 import { getTvShowsAsync } from "../../store/actions/tvShows";
+import TvCard from "./TvCard";
 
 const TVshows = () => {
   const dispatch = useDispatch();
@@ -46,15 +46,13 @@ const TVshows = () => {
       <div className="trend-movie-cards">
         {allTvShows?.map((el) => {
           return (
-            <TrendMovieCards
-              key={el?.id}
-              id={el?.id}
-              image={movie_img(el?.poster_path)}
-              name={
-                el?.original_title === undefined ? el?.name : el?.original_title
-              }
-              vote={parseFloat(el?.vote_average.toFixed(1))}
-            />
+            <TvCard key={el?.id}
+            id={el?.id}
+            image={movie_img(el?.poster_path)}
+            name={
+              el?.original_title === undefined ? el?.name : el?.original_title
+            }
+            vote={parseFloat(el?.vote_average.toFixed(1))}/>
           );
         })}
       </div>
