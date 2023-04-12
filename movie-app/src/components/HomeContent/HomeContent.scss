@@ -72,3 +72,19 @@ $main-color: #e1b517;
     }
   }
 }
+
+
+@media(max-width: 768px) {
+  .home-content{
+    width: 100%;
+    margin: 0px;
+    .story-boxes{
+      .story-box{
+        img{
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

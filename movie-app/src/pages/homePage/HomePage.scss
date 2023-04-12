@@ -118,3 +118,13 @@ $main-color: #e1b517;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    .sidebar {
+      width: 100%;
+      transform: translateX(-300%);
+    }
+  }
+}

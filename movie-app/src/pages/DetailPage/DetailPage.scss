@@ -13,6 +13,7 @@ $main-color: #e1b517;
       height: 28rem;
       border-radius: 10px;
       border: 1px solid $main-color;
+      object-fit: contain;
     }
     .detail-info {
       margin-left: 4rem;
