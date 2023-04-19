@@ -69,3 +69,33 @@ $main-color: #e1b517;
     opacity: 0.7;
   }
 }
+
+@media(max-width: 768px) {
+  .footer{
+    .signin-btn{
+      width: 12rem;
+      font-size: 14px;
+    }
+    .social-media-icons{
+      .icons{
+        a{
+          .icon{
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .lists{
+      .footer-list{
+        flex-direction: column;
+        li{
+          margin: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+    .copy-right{
+      font-size: 15px;
+    }
+  }
+}
