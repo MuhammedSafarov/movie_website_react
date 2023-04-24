@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "./HomeContent.scss";
 import MovieCards from "./MovieCards";
 import SlickSlider from "../Slider/SlickSlider";

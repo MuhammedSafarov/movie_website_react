@@ -46,5 +46,15 @@ $main-color: #e1b517;
   .header {
     width: 100%;
     margin: 0 !important;
+    .logo{
+      .navbar-name{
+        font-size: 16px;
+      }
+    }
+    .navbar-sections{
+      li{
+        font-size: 15px;
+      }
+    }
   }
 }

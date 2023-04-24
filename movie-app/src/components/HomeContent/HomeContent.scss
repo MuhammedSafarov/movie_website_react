@@ -73,20 +73,38 @@ $main-color: #e1b517;
   }
 }
 
-
-@media(max-width: 768px) {
-  .home-content{
+@media (max-width: 768px) {
+  .home-content {
     margin-left: 0px !important;
-    .story-boxes{
-      .story-box{
+    .story-boxes {
+      .story-box {
         border: 2px solid yellow;
-        img{
-          width: 1.7rem;
-          height: 1.7rem;
+        margin: 2px;
+        img {
+          width: 2rem;
+          height: 2rem;
         }
       }
       .unwatched {
         border: 2px solid gray;
+      }
+    }
+    .movies, .trend-movies {
+      .content-header {
+        .content-name{
+          font-size: 15px;
+        }
+      }
+      .movie-cards{
+        .movie-card{
+          img{
+            width: 8rem;
+            height: 10rem;
+          }
+          .movie-rating, .movie-name{
+            font-size: 14px;
+          }
+        }
       }
     }
   }

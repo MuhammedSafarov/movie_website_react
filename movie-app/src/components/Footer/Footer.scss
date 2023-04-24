@@ -5,7 +5,6 @@ $main-color: #e1b517;
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
-
 .footer {
   color: white;
   text-align: center;
@@ -37,8 +36,8 @@ $main-color: #e1b517;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      a{
-          color: white;
+      a {
+        color: white;
       }
       .icon {
         font-size: 20px;
@@ -70,31 +69,31 @@ $main-color: #e1b517;
   }
 }
 
-@media(max-width: 768px) {
-  .footer{
-    .signin-btn{
-      width: 12rem;
-      font-size: 14px;
+@media (max-width: 768px) {
+  .footer {
+    .signin-btn {
+      width: 10rem;
+      font-size: 12px;
     }
-    .social-media-icons{
-      .icons{
-        a{
-          .icon{
+    .social-media-icons {
+      .icons {
+        a {
+          .icon {
             font-size: 17px;
           }
         }
       }
     }
-    .lists{
-      .footer-list{
+    .lists {
+      .footer-list {
         flex-direction: column;
-        li{
+        li {
           margin: 5px;
           font-size: 14px;
         }
       }
     }
-    .copy-right{
+    .copy-right {
       font-size: 15px;
     }
   }

@@ -5,7 +5,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <button className="signin-btn">Sign in for more access</button>
+      <button className="signin-btn">Login for more access</button>
       <div className="social-media-icons">
         <div className="icons">
           <a

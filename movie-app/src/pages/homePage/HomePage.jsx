@@ -20,6 +20,7 @@ const HomePage = () => {
   useEffect(() => {
     dispatch(discoverMoviesAsync());
     dispatch(getTrendMoviesAsync());
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   const findMovie = async (e) => {
