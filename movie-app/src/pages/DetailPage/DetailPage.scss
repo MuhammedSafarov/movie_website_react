@@ -13,7 +13,7 @@ $main-color: #e1b517;
       height: 28rem;
       border-radius: 10px;
       border: 1px solid $main-color;
-      object-fit: contain;
+      // object-fit: contain;
     }
     .detail-info {
       margin-left: 4rem;
@@ -41,6 +41,35 @@ $main-color: #e1b517;
         font-size: 17px;
         opacity: 0.6;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-container{
+    width: 90% !important;
+    .detail-card{
+      flex-direction: column;
+      align-items: center;
+      img{
+        width: 14rem !important;
+        height: 20rem !important;
+      }
+      .detail-info{
+        margin: 0;
+        .movie-name{
+          font-size: 20px !important;
+        }
+        .rating{
+          font-size: 15px;
+          svg{
+            margin: 1px 4px !important;
+          }
+        }
+        .about-movie{
+          font-size: 14px;
+        }
       }
     }
   }

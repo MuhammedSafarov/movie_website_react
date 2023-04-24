@@ -122,8 +122,9 @@ $main-color: #e1b517;
 
 @media (max-width: 768px) {
   .container {
-    width: 100%;
-    margin-left: 3.5rem;
+    width: 90%;
+    margin: 0 auto;
+    // margin-left: 3.5rem;
     .sidebar {
       position: absolute;
       

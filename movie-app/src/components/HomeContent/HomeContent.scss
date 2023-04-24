@@ -75,7 +75,8 @@ $main-color: #e1b517;
 
 @media (max-width: 768px) {
   .home-content {
-    margin-left: 0px !important;
+    width: 90%;
+    margin: 0 auto;
     .story-boxes {
       .story-box {
         border: 2px solid yellow;
