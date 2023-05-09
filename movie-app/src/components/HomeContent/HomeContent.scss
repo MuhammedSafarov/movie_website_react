@@ -90,19 +90,21 @@ $main-color: #e1b517;
         border: 2px solid gray;
       }
     }
-    .movies, .trend-movies {
+    .movies,
+    .trend-movies {
       .content-header {
-        .content-name{
+        .content-name {
           font-size: 15px;
         }
       }
-      .movie-cards{
-        .movie-card{
-          img{
+      .movie-cards {
+        .movie-card {
+          img {
             width: 8rem;
             height: 10rem;
           }
-          .movie-rating, .movie-name{
+          .movie-rating,
+          .movie-name {
             font-size: 14px;
           }
         }

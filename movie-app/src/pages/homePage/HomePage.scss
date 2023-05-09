@@ -124,11 +124,25 @@ $main-color: #e1b517;
   .container {
     width: 90%;
     margin: 0 auto;
-    // margin-left: 3.5rem;
     .sidebar {
+      background-color: black !important;
       position: absolute;
-      
-      transform: translateX(-500%);
+      transform: translateX(-10%);
+      width: 60% !important;
+      z-index: 100;
+      .sidebar-sections{
+        .search{
+          .search-form{
+            .input{
+              width: 70% !important;
+            }
+          }
+        }
+        li, button{
+          font-size: 14px !important;
+        }
+        
+      }
     }
   }
 }
