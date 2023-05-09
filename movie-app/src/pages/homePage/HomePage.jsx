@@ -21,7 +21,6 @@ const HomePage = () => {
 
   const onClickHamburger = () => {
     setHamburgerMenu((prev) => !prev);
-    console.log("hi");
   };
 
   useEffect(() => {
