@@ -21,7 +21,7 @@ const HomePage = () => {
 
   const onClickHamburger = () => {
     setHamburgerMenu((prev) => !prev);
-    console.log('hi');
+    console.log("hi");
   };
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="container">
-        <div className={hamburgerMenu ? 'sidebar opened' : 'sidebar'}>
+        <div className={hamburgerMenu ? "sidebar opened" : "sidebar"}>
           <ul className="sidebar-sections">
             <li className="search">
               <form onSubmit={findMovie} action="" className="search-form">
