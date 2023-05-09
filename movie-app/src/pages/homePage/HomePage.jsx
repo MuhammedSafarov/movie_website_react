@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import React, { useState, useEffect } from "react";
 import { BiTrendingUp, BiHome } from "react-icons/bi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { FiMonitor } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineRecentActors } from "react-icons/md";
@@ -15,7 +16,13 @@ import { discoverMoviesAsync } from "../../store/actions/discoverMovies";
 const HomePage = () => {
   const [searchedMovie, setSearchedMovie] = useState([]);
   const [searchKey, setSearchKey] = useState("");
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const dispatch = useDispatch();
+
+  const onClickHamburger = () => {
+    setHamburgerMenu((prev) => !prev);
+    console.log('hi');
+  };
 
   useEffect(() => {
     dispatch(discoverMoviesAsync());
@@ -41,8 +48,13 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
+      <div className="burger-menu">
+        <div>
+          <GiHamburgerMenu onClick={onClickHamburger} className="menu-icon" />
+        </div>
+      </div>
       <div className="container">
-        <div className="sidebar">
+        <div className={hamburgerMenu ? 'sidebar opened' : 'sidebar'}>
           <ul className="sidebar-sections">
             <li className="search">
               <form onSubmit={findMovie} action="" className="search-form">
