@@ -99,10 +99,10 @@ $main-color: #e1b517;
       .movie-card {
         color: white;
         margin: 15px;
-        width: 6rem;
+        width: 14rem;
         img {
-          width: 6rem;
-          height: 9rem;
+          width: 14rem;
+          height: 17.5rem;
           border-radius: 10px;
         }
         img:hover {
@@ -121,7 +121,6 @@ $main-color: #e1b517;
           font-weight: bolder;
           font-size: 16px;
           margin-left: 5px;
-          overflow: hidden;
         }
       }
     }
@@ -179,6 +178,20 @@ $main-color: #e1b517;
         }
         &.opened {
           transform: translateX(0);
+        }
+      }
+      .search-content {
+        .movie-card {
+          margin: 15px;
+          width: 6rem;
+          img {
+            width: 6rem;
+            height: 9rem;
+          }
+          .movie-name {
+            font-size: 16px;
+            margin-left: 5px;
+          }
         }
       }
     }
