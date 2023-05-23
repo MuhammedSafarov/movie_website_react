@@ -11,6 +11,7 @@ import TVshows from "./pages/tvShowsPage/TVshows";
 import ActorsPage from "./pages/actorsPage/ActorsPage";
 import ActorsDetailPage from "./pages/DetailPage/ActorsDetailPage";
 import TvShowsDetailPage from "./pages/DetailPage/TvShowsDetailPage";
+import Login from "./pages/loginPage/Login";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="tv-shows/detail/:id" element={<TvShowsDetailPage />} />
         <Route path="/actors" element={<ActorsPage />} />
         <Route path="/actors/about/:id" element={<ActorsDetailPage />} />
+        <Route path='/login' element={<Login/>}/>
       </Routes>
       <Footer />
     </div>

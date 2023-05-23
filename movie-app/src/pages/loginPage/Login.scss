@@ -1,0 +1,56 @@
+$main-color: #e1b517;
+
+.login-container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-form {
+    width: 25%;
+    height: 60%;
+    background-color: $main-color;
+    padding: 20px;
+    border-radius: 10px;
+    .email,
+    .password {
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 2px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid black;
+      }
+      label {
+        font-weight: bolder;
+        margin-top: 10px;
+        font-size: 17px;
+        margin-left: 5px;
+      }
+    }
+    .submit-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        font-size: 15px;
+        margin: 15px;
+        padding: 10px;
+        width: 5.5rem;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        background-color: black;
+        color: $main-color;
+      }
+      button:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+    .password-link {
+      color: blue;
+      margin-left: 60%;
+    }
+  }
+}
