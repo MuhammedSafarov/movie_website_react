@@ -34,10 +34,14 @@ $main-color: #e1b517;
       margin-right: 20px;
       font-size: 18px;
     }
-    li:hover {
+    .navbar-options:hover {
       cursor: pointer;
       transition: ease-in-out 0.2s;
       color: $main-color;
+    }
+    .navbar-options{
+      color: white;
+      text-decoration: none;
     }
   }
 }

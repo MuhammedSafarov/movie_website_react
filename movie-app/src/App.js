@@ -12,6 +12,7 @@ import ActorsPage from "./pages/actorsPage/ActorsPage";
 import ActorsDetailPage from "./pages/DetailPage/ActorsDetailPage";
 import TvShowsDetailPage from "./pages/DetailPage/TvShowsDetailPage";
 import Login from "./pages/loginPage/Login";
+import Register from "./pages/registerPage/Register";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/actors" element={<ActorsPage />} />
         <Route path="/actors/about/:id" element={<ActorsDetailPage />} />
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
       </Routes>
       <Footer />
     </div>

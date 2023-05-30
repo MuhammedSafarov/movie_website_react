@@ -1,18 +1,20 @@
 $main-color: #e1b517;
 
-.login-container {
-  height: 60vh;
+.register-container {
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  .login-form {
+  .register-form {
     width: 25%;
     height: 60%;
     background-color: $main-color;
     padding: 20px;
     border-radius: 10px;
     .email,
-    .password {
+    .password,
+    .name,
+    .surname {
       display: flex;
       flex-direction: column;
       input {
@@ -50,13 +52,13 @@ $main-color: #e1b517;
     }
     .password-link {
       color: blue;
-      margin-left: 60%;
+      margin-left: 45%;
     }
   }
 }
 
 @media (max-width: 768px) {
-  .login-form {
+  .register-form {
     width: 80% !important;
   }
 }
