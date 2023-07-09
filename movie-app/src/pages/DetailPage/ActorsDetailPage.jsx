@@ -13,6 +13,7 @@ const ActorsDetailPage = () => {
     let data = res?.data;
     setCardDetails(data);
   };
+
   const profile_img = (path) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${path}`;
   };
@@ -20,6 +21,7 @@ const ActorsDetailPage = () => {
   useEffect(() => {
     getCardDetail();
   }, []);
+
   console.log(cardDetails);
 
   return (

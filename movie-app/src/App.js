@@ -31,8 +31,8 @@ function App() {
         <Route path="tv-shows/detail/:id" element={<TvShowsDetailPage />} />
         <Route path="/actors" element={<ActorsPage />} />
         <Route path="/actors/about/:id" element={<ActorsDetailPage />} />
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </div>
